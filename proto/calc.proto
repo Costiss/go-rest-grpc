@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "github.com/costiss/go-rest-grpc/proto";
+
+
+package Calculator;
+
+// The greeting service definition.
+service Calculator {
+  // Sends a greeting
+  rpc Add (AddRequest) returns (AddReply) {}
+}
+
+// The request message containing the user's name.
+message AddRequest {
+  int32 first = 1;
+  int32 second = 2;
+}
+
+// The response message containing the greetings
+message AddReply {
+  int32 result = 1;
+}
